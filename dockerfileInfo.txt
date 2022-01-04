@@ -1,0 +1,8 @@
+FROM node:current-alpine //Selecciona la imagen
+
+COPY . /app/ //Copia loas archiuvos locales al contenedor 
+WORKDIR /app  //Se mueve a la carpeta app
+RUN /bin/bash -c 'npm i' //Para correr comandos
+
+
+CMD [ "npm", "start" ] //Para correr la aplicacion
